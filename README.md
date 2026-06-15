@@ -1,4 +1,4 @@
-# <p align="center"><img src="public/banner.png" alt="REDSTONE FITNESS Banner" width="100%"></p>
+# <p align="center"><img src="public/redstone_fitness_banner_1781535715059.png" alt="REDSTONE FITNESS Banner" width="100%"></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-15.0%2B-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js">
