@@ -10,7 +10,7 @@
 
 <h3 align="center">🔴 REDSTONE FITNESS 🔴</h3>
 <p align="center"><strong>Transform Your Body. Transform Your Life.</strong></p>
-<p align="center">A premium, highly interactive, and responsive single-page landing application built for a modern fitness studio located in Lucknow, India.</p>
+<p align="center">A premium, highly interactive, and responsive single-page landing application built for a modern fitness studio Project link https://fitness-app-sigma-gold.vercel.app/.</p>
 
 ---
 
