@@ -10,32 +10,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&h=800&fit=crop",
+    src: "/img/photo-1611672585731-fa10603fb9e0.avif",
     alt: "Gym equipment",
     span: "md:row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=600&h=400&fit=crop",
-    alt: "Weight training",
+    src: "/img/a.jpeg",
+    alt: "Gym floor",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=600&h=400&fit=crop",
-    alt: "Cardio zone",
+    src: "/img/b.jpeg",
+    alt: "Training area",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=600&h=600&fit=crop",
-    alt: "Dumbbells",
-    span: "",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&h=800&fit=crop",
+    src: "/img/photo-1518611012118-696072aa579a.avif",
     alt: "Training session",
     span: "md:row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=600&h=400&fit=crop",
+    src: "/img/photo-1576678927484-cc907957088c.avif",
     alt: "Gym interior",
     span: "",
   },
@@ -85,7 +80,7 @@ export default function Gallery() {
           </h2>
         </motion.div>
 
-        <div className="grid gap-4 md:grid-cols-3 md:grid-rows-2">
+        <div className="grid gap-4 md:grid-cols-3">
           {galleryImages.map((img) => (
             <motion.div
               key={img.src}
@@ -94,10 +89,13 @@ export default function Gallery() {
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
               onClick={() => setSelected(img.src)}
             >
-              <div
-                className="h-full min-h-[250px] w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url(${img.src})` }}
-              />
+              <div className="relative h-full w-full min-h-[320px]">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
               <div className="absolute inset-0 bg-dark/0 transition-colors duration-300 group-hover:bg-dark/40" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <svg className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -123,12 +121,13 @@ export default function Gallery() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="relative max-h-[90vh] max-w-[90vw] overflow-hidden rounded-2xl"
+              className="relative flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div
-                className="h-[80vh] w-full bg-contain bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${selected})` }}
+              <img
+                src={selected}
+                alt="Enlarged view"
+                className="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain"
               />
               <button
                 onClick={() => setSelected(null)}

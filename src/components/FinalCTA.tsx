@@ -37,11 +37,11 @@ export default function FinalCTA() {
         className="cta-bg absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=2070')",
+            "url('/img/photo-1605296867304-46d5465a13f1.avif')",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/80 to-dark/95" />
-      <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dark/80 via-dark/60 to-dark/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-dark/80" />
 
       <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-[150px]" />
 

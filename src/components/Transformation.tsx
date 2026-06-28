@@ -51,7 +51,7 @@ export default function Transformation() {
         className="absolute inset-0 bg-cover bg-fixed bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070')",
+            "url('/img/photo-1517836357463-d25dfeac3438.avif')",
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/80 to-dark/95" />

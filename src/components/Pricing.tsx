@@ -26,7 +26,7 @@ const plans = [
   },
   {
     title: "Gym + Cardio",
-    price: "₹1,200",
+    price: "₹1,000",
     period: "/month",
     features: [
       "Everything in Gym Plan",
